@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form Validator </title>
+    <link rel="icon" type="png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKMDAbJkO5iPTk1et947XkID_kEx9SJxFwA&s">
+    <link rel="stylesheet" href="pr.css">
+</head>
+<body>
+    <div class="Full-Image">
+    <center><h1>REGISTER FORM</h1></center>
+    <div class="container">
+        <form action="https://weshineacademy.com/wp-content/uploads/2018/02/thank.png" target="_blank" method="get">
+                    <label for="f_name">First name:</label>
+                    <input type="text" name="first_name" id="f_name" placeholder="Enter first name" required><span class="error" id="f_name_error"></span>
+                    <label for="m_name">Middle name:</label>
+                    <input type="text" name="middle_name" id="m_name" placeholder="Enter middle name" required><span class="error" id="m_name_error"></span>
+                    <label for="l_name">Last name:</label></td>
+                    <input type="text" name="last_name" id="l_name" placeholder="Enter last name" required><span class="error" id="l_name_error"></span><br><br>
+        </hr>
+                   
+                    <label for="gender">Gender:</label>
+                    
+                        <input type="radio" name="gender" value="Male" required>Male
+                        <input type="radio" name="gender" value="Female" required>Female<br><br>
+    </hr>
+                            
+                
+                    <label for="address">Address:</label>
+                    <input type="textarea" name="address" id="address" placeholder="Enter your address" required>
+                    <label for="zip_code">Zip-Code:</label>
+                    <input type="text" name="zip_code" id="zip_code" placeholder="Enter your Zip-code" pattern="[0-9]{6}" required>
+                    <label>Country:</label>
+                    
+                        <select name="Country" id="country" required>
+                            <option value="">SELECT</option>
+                            <option value="India">India</option>
+                            <option value="America">America</option>
+                            <option value="Africa">Africa</option>        
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Russia">Russia</option>
+                        </select> <br><br>
+</hr>
+                    <label>Phone No:</label>
+                    
+                        <select name="Phone-no" id="no" required>
+                            <option value="+91">+91</option>
+                            <option value="+93">+93</option>
+                            <option value="+54">+54</option>
+                            <option value="+61">+61</option>        
+                            <option value="+32">+32</option>
+                            <option value="+57">+57</option>
+                        </select> 
+                         <input type="text" name="Phone-no" id="num" placeholder="Enter a number:" pattern="[0-9]{10}" required><br><br>
+                    </hr>
+               
+                
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email-Id" required><br><br>
+                </hr>
+             
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#].{8,}" placeholder="Enter your Password" title="Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, and a digit"  placeholder="Enter your Password" required> <br><br></hr>
+                    <label for="re_password">Re-Password:</label></td>
+                    <input type="password" name="re_password" id="re_password"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#].{8,}" placeholder="Enter your Password" title="Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, and a digit"  placeholder="Enter your Password" required> </hr>
+        
+                    <label for="degree">Degree:</label>
+                  
+                        <select id="degree" required>
+                            <option value="">SELECT </option>
+                            <option value="B.E">B.E</option>
+                            <option value="B.TECH">B.TECH</option>
+                            <option value="B.SC">B.SC</option>
+                            <option value="M.E">ME</option>
+                            <option value="M.S">MS</option>
+                            <option value="PhD">PhD</option>
+                        </select><br><br>
+                    </hr>
+                    <label for="department">Department:</label>
+                  
+                        <select id="department" required>
+                            <option value="">SELECT</option>
+                            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                            <option value="Electrical and Electronic Engineering">Electrical and Electronic Engineering</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                        </select><br><br>
+                    
+                    </hr>
+                    <label for="College ">College name:</label>
+                    <input type="textarea" name="College" id="address" placeholder="Enter your College Name:" required><br>
+                </hr><br>
+                <label for="C_Address ">College Address:</label>
+                    <input type="textarea" name="C_Address" id="address" placeholder="Enter your College Address:" required><br>
+                    
+            
+                    <br>
+            <button type="submit" value="submit" >Submit</button>
+            <button type="reset" value="clear">Clear</button> </hr>
+        </form>
+    </div>
+</div>
+    <script>
+     const password = document.getElementById('password');
+     const rePassword = document.getElementById('re_password');
+     const passwordMessage = document.createElement('p');
+      passwordMessage.style.color = 'red';
+      rePassword.insertAdjacentElement('afterend', passwordMessage);
+       rePassword.addEventListener('input', () => {
+    if (password.value !== rePassword.value) {
+        passwordMessage.textContent = "Passwords do not match.";
+        rePassword.setCustomValidity("Passwords do not match.");
+    } else {
+        passwordMessage.textContent = "";
+        rePassword.setCustomValidity("");
+    }
+});
+
+        const degreeDropdown = document.getElementById('degree');
+        const departmentDropdown = document.getElementById('department');
+        degreeDropdown.addEventListener('change', () => {
+            if (degreeDropdown.value === "PhD") {
+                departmentDropdown.innerHTML = `
+                    <option value="SELECT">SELECT </option>
+                     <option value="Research in AI">Research in AI</option>
+                    <option value="Quantum Computing">Quantum Computing</option>
+                    <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
+                `;
+            } else if(degreeDropdown.value === "B.E"){
+                departmentDropdown.innerHTML = `
+                    <option value="SELECT">SELECT </option>
+                    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                    <option value="Electrical and Electronic Engineering">Electrical and Electronic Engineering</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                `;
+            }
+            else if(degreeDropdown.value === "B.TECH"){
+                 departmentDropdown.innerHTML = `
+                 <option value="SELECT">SELECT </option>
+                <option value="IT ">IT </option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                `;
+            }
+            else if(degreeDropdown.value === "B.SC"){
+                 departmentDropdown.innerHTML = `
+                 <option value="SELECT">SELECT </option>
+                <option value="forensic Science">forensic Science</option>
+                <option value="Physics">Physics</option>
+                 <option value="Chemistry">Chemistry</option>
+                `;
+            }
+        });
+        
+    </script>
+</body>
+</html>
