@@ -64,7 +64,5 @@ Enhancements
 
 Error Messages: While there is an error span in the HTML (<span class="error" id="f_name_error"></span>), there is no clear logic to display them dynamically except for the password mismatch. 
 
-Custom Styling for Error Messages: The error messages are red, but could be further styled for better visibility (e.g., bold or highlighted background).
-
 For output reference:
 (https://github.com/user-attachments/files/18265623/Interactive-form-validation-MINI-project.1.pdf)
