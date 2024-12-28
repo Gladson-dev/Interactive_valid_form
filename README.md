@@ -62,7 +62,7 @@ Real-time updates to the department options based on degree selection allow for 
 
 Enhancements
 
-Error Messages: While there is an error span in the HTML (<span class="error" id="f_name_error"></span>), there is no clear logic to display them dynamically except for the password mismatch. You could extend this feature to show real-time validation feedback for other fields like the email or zip code.
+Error Messages: While there is an error span in the HTML (<span class="error" id="f_name_error"></span>), there is no clear logic to display them dynamically except for the password mismatch. 
 
 Custom Styling for Error Messages: The error messages are red, but could be further styled for better visibility (e.g., bold or highlighted background).
 
