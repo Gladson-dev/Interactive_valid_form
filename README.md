@@ -1,4 +1,4 @@
-Interactive  Form Validator
+Interactive  Form Validator:
 
 A dynamic and user-friendly interactive form validation project designed to ensure smooth data entry with real-time feedback.
 
@@ -57,8 +57,7 @@ Custom validation is used for password confirmation to ensure that the two passw
 
 Interactive Feedback
 
-The user is immediately alerted with error messages for fields like password mismatch, ensuring an interactive and user-friendly experience.[l215-MINI-project.pdf](https://github.com/user-attachments/files/18265605/l215-MINI-project.pdf)
-
+The user is immediately alerted with error messages for fields like password mismatch, ensuring an interactive and user-friendly experience.
 Real-time updates to the department options based on degree selection allow for a smoother, more dynamic form experience.
 
 Enhancements
